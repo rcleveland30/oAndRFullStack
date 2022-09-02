@@ -10,6 +10,10 @@ server.get('/', (req,res) =>{
     res.render('pages', { template:'landing' })
 })
 
+server.get('/about', (req,res) =>{
+    res.render('pages', { template:'about' })
+})
+
 server.listen(8080, () => {
     console.log('The server is running at port 8080')
 })
