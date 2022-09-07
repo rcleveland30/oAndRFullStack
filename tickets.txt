@@ -1,3 +1,47 @@
 signup page inside main
 button collects information
 server listens and stores.
+
+migrations builds table and columns
+
+seeders is rows, data
+
+1. install production dependencies
+
+    npm i sequelize pg 
+
+2. install development dependencies
+
+    npm i -D sequelize-cli
+
+3. Initilize the project to use sequelize-cli
+
+4. convert config.json to config.js( this alos)
+
+5. update the value in config.js
+
+6.Create the database
+
+    npx sequelize-cli db:create
+
+7. create a model 
+
+    npx sequelize-cli model:generate --name User --attributes firstName:string,lastName:string,email:string,password:string
+
+8. add the table and colums defined in the model to the database
+
+    npx sequelize-cli db:migrate
+
+9. create a seed file for User
+
+    npx sequelize-cli seed:generate --name user
+
+10. populate seed file which sequelize-cli created
+
+11. add the seed data to the rows within the Users table in the database
+
+    npx sequelize-cli db:seed all
+
+12. This is it to create a database with a Users table and rows for user records
+
+13. good idea to define scripts n package.json to make database management easier and shareable
