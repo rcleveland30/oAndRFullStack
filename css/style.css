@@ -29,12 +29,15 @@ ul{
     list-style-type: none;
 }
 
-.y-wrap{
+.y-sticky{
     display: flex;
     flex-direction: column;
     height: 100%;
+}
+
+.y-wrap{
+    width:90%;
     margin: 0 auto;
-    width: 90%;
 }
 
 .navs{

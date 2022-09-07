@@ -7,9 +7,13 @@ server.use('/css', express.static(__dirname + "/css"))
 server.use('/js', express.static(__dirname + "/js"))
 server.set('view engine', 'ejs') //set ejs engine
 
-const navs = ['About','Contact','SignUp']
+const navs = ['Home','About','Contact','SignUp'] // navigation pages
 
 server.get('/', (req,res) => {
+    res.render('pages', { template: 'landing',navs })
+})
+
+server.get('/Home', (req,res) => {
     res.render('pages', { template: 'landing',navs })
 })
 
