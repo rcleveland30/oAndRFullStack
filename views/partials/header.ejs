@@ -1,5 +1,7 @@
-<header>
-    <div class="y-wrap">
-       <h1>GameTyme</h1>
-    </div>
+<header class = "header">
+    <ul class="navs">
+        <% navs.forEach(nav => { %>
+            <li><a href="<%= nav.toLowerCase() %>"><%= nav %></a></li>
+        <% }) %>
+    </ul>
 </header>

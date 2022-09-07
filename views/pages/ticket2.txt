@@ -1,0 +1,4 @@
+make a render function that shows model
+login
+signup
+separate nav items

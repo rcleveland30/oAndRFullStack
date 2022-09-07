@@ -1,0 +1,3 @@
+signup page inside main
+button collects information
+server listens and stores.
