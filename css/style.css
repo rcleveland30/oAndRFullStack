@@ -15,6 +15,11 @@ h1 {
     /* text-align: center; */
 }
 
+h2 {
+    margin-bottom: 10px;
+}
+
+
 footer{
     background-color: navy;
     color: white;
@@ -47,6 +52,28 @@ input {
     font-style: italic;
     font-size: 1.1rem;
 }
+
+img {
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+}
+
+p {
+    width: 50%;
+}
+
+h3, p {
+    margin-left: 10px;
+    position: relative;
+    top: 125px;
+}
+
+.bio-item {
+    display: flex;
+    justify-content: center;
+}
+
 
 .search-box {
     margin-right: 20px;
