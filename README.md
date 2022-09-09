@@ -6,11 +6,11 @@ Ron's Github profile can be found [here](https://github.com/rcleveland30).
 
 Oscar's Github profile can be found [here](https://github.com/Ozzythegrouch).
 
-### A project using front-end, back-end, and a database.
+## A project using front-end, back-end, and a database.
 
 Using Javascript, HTML, CSS, and EJS.
 
-#### Taking the RAWG Video Games Database created by RAWG on RapidAPI.
+## Taking the RAWG Video Games Database created by RAWG on RapidAPI.
 
 This site is being built using the [RAWG Video Game Database](https://rapidapi.com/accujazz/api/rawg-video-games-database/).
 
