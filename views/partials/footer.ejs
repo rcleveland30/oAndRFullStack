@@ -1,5 +1,9 @@
 <footer>
     <div class="y-wrap">
-        Here lies the footer.
+        <ul class="navs-footer">
+            <% navs.forEach(nav => { %>
+                <li><a href="<%= nav.toLowerCase() %>"><%= nav %></a></li>
+            <% }) %>
+        </ul>
     </div>
 </footer>

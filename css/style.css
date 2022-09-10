@@ -10,13 +10,26 @@ html {
     height: 100%;
 }
 
+h1 {
+    margin-bottom: 5px;
+    /* text-align: center; */
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+
 footer{
-    background-color: #999;
-    padding: 40px 0;
+    background-color: navy;
+    color: white;
+    padding: 20px 0;
+    text-align: right;
 }
 
 header{
-    background-color: #ddd;
+    background-color: navy;
+    color: white;
     padding: 30px 0;
 }
 
@@ -26,10 +39,47 @@ main{
 }
 
 ul{
+    align-items: left;
     list-style-type: none;
 }
 
-.y-sticky{
+li {
+    margin-right: 3%;
+}
+
+input {
+    border-radius: 5px;
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+img {
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+}
+
+p {
+    width: 50%;
+}
+
+h3, p {
+    margin-left: 10px;
+    position: relative;
+    top: 125px;
+}
+
+.bio-item {
+    display: flex;
+    justify-content: center;
+}
+
+
+.search-box {
+    margin-right: 20px;
+}
+
+.y-wrap{
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -42,7 +92,8 @@ ul{
 
 .navs{
     display: flex;
-    flex-direction: column;
+    font-weight: bold;
+    /* justify-content: space-evenly; */
 }
 
 .loginModal{

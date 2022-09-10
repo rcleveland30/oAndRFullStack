@@ -5,6 +5,7 @@ const server = express() //executes the export into server, gives access to meth
 server.use(express.json()) // middleware executes request before server
 server.use('/css', express.static(__dirname + "/css"))
 server.use('/js', express.static(__dirname + "/js"))
+server.use('/assets', express.static(__dirname + "/assets"))
 server.set('view engine', 'ejs') //set ejs engine
 
 const navs = ['Home','About','Contact','SignUp'] // navigation pages
