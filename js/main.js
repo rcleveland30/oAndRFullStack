@@ -54,3 +54,18 @@ function clickOutside(e){
 //     return JSON.stringify(data, null, 4)
 // }
 
+// Landing page information
+const gameName = document.querySelector('.game-name')
+const gameLogo = document.querySelector('.game-logo')
+
+const gameList = async() => {
+    const apiData = await fetch('https://api.rawg.io/api/games?key=95016841632347e98a246750ba9e3d58')
+    const jsonData = await apiData.json()
+    const games = jsonData.results
+
+    // for (let game of games) {
+        const title = games.name;
+        const cover = games.background_image;
+        console.log(title)
+    // }
+}

@@ -54,26 +54,34 @@ input {
 }
 
 img {
-    border-radius: 50%;
+    border-radius: 25%;
     height: 250px;
+    margin-bottom: 15px;
     width: 250px;
 }
 
-p {
-    width: 50%;
+h3, p {
+    position: relative;
+    text-align: center;
 }
 
-h3, p {
-    margin-left: 10px;
-    position: relative;
-    top: 125px;
+.bio-box {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .bio-item {
+    align-items: center;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    margin: 20px 0;
+    text-align: center;
 }
 
+.page-contain input {
+    height: 100px;
+    width: 300px;
+}
 
 .search-box {
     margin-right: 20px;
@@ -83,11 +91,8 @@ h3, p {
     display: flex;
     flex-direction: column;
     height: 100%;
-}
-
-.y-wrap{
-    width:90%;
     margin: 0 auto;
+    width:90%;
 }
 
 .navs{
@@ -119,7 +124,7 @@ h3, p {
 .closeButton{
     color: #ccc;
     float: right;
-    font-size: 30 px;
+    font-size: 30px;
 }
 
 .closeButton:hover, 
