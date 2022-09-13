@@ -84,10 +84,10 @@ h3, p {
     color: darkblue;
 }
 
-.review-space img {
-    /* height: 200px;
-    width: 300px; */
-}
+/* .review-space img {
+    height: 200px;
+    width: 300px;
+} */
 
 .y-wrap{
     display: flex;
