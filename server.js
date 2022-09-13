@@ -3,6 +3,7 @@ const express = require('express') //gives access to packages for server
 const server = express() //executes the export into server, gives access to methods and properties
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
+const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 const checkAuth = require('./middleware');
 const { User } = require('./models')
 
@@ -52,6 +53,14 @@ server.get('/login', (req, res) => {
       message: 'Please login'
     });
   });
+
+server.get('/games/:slug', async (req, res) => {
+  const result = await fetch(`https://api.rawg.io/api/games/${req.params.slug}?key=95016841632347e98a246750ba9e3d58`)
+  const data = await result.json()
+  const { name, released, description, background_image } = data;
+  res.render('pages', { template: 'game-detail', navs, name, released, description, background_image })
+})
+
 
 server.post('/login', async (req, res) => {
     const { username, password } = req.body;

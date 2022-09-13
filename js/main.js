@@ -1,9 +1,34 @@
-const logIn = document.querySelector('.login-form')
-const logInButton = document.getElementById('submit-log-in')
-const loginModal = document.getElementById('loginModal') //modal element
-const modalButton = document.getElementById('modalButton') // open modal
-const closeButton = document.getElementsByClassName('closeButton')[0] //close modal
+const logIn = document.querySelector('.login-form'),
+logInButton = document.getElementById('submit-log-in'),
+loginModal = document.getElementById('loginModal'), //modal element
+modalButton = document.getElementById('modalButton'), // open modal
+closeButton = document.getElementsByClassName('closeButton')[0], //close modal
+gameName = document.querySelector('.game-name'),
+gameLogo = document.querySelector('.game-logo'),
+contentDisplay = document.querySelector('.page-contain'),
+gamesList = document.querySelector('#games-list')
 
+function buildListItem(content) {
+    const li = document.createElement('li');
+    li.innerHTML = `
+        <a href="games/${content.slug}">${content.name}</a>
+    `;
+    return li;
+}
+
+// Landing page information
+const gameList = async() => {
+    const apiData = await fetch('https://api.rawg.io/api/games?key=95016841632347e98a246750ba9e3d58')
+    const jsonData = await apiData.json()
+    const games = jsonData.results
+
+    for (let game of games) {
+        const listItem = buildListItem(game)
+        gamesList.append(listItem)
+    }
+}
+
+gameList()
 
 //modal click for open
 modalButton.addEventListener('click', openModal)
@@ -54,18 +79,3 @@ function clickOutside(e){
 //     return JSON.stringify(data, null, 4)
 // }
 
-// Landing page information
-const gameName = document.querySelector('.game-name')
-const gameLogo = document.querySelector('.game-logo')
-
-const gameList = async() => {
-    const apiData = await fetch('https://api.rawg.io/api/games?key=95016841632347e98a246750ba9e3d58')
-    const jsonData = await apiData.json()
-    const games = jsonData.results
-
-    // for (let game of games) {
-        const title = games.name;
-        const cover = games.background_image;
-        console.log(title)
-    // }
-}
