@@ -3,10 +3,10 @@ logInButton = document.getElementById('submit-log-in'),
 loginModal = document.getElementById('loginModal'), //modal element
 modalButton = document.getElementById('modalButton'), // open modal
 closeButton = document.getElementsByClassName('closeButton')[0], //close modal
-gameName = document.querySelector('.game-name'),
-gameLogo = document.querySelector('.game-logo'),
 contentDisplay = document.querySelector('.page-contain'),
-gamesList = document.querySelector('#games-list')
+gamesList = document.querySelector('#games-list'),
+searchBtn = document.queryCommandIndeterm('.search.btn'),
+subRev = document.querySelector('#submit-review')
 
 function buildListItem(content) {
     const li = document.createElement('li');
@@ -54,7 +54,6 @@ function clickOutside(e){
     }
 }
 
-
 // const handleSubmit = e => {
 //     console.log('he')
 //         e.preventDefault()
@@ -79,3 +78,6 @@ function clickOutside(e){
 //     return JSON.stringify(data, null, 4)
 // }
 
+searchBtn.addEventListener ('click', (e) => {
+    
+})
