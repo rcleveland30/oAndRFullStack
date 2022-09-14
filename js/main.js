@@ -27,7 +27,6 @@ const gameList = async() => {
         gamesList.append(listItem)
     }
 }
-
 gameList()
 
 //modal click for open
@@ -78,6 +77,11 @@ function clickOutside(e){
 //     return JSON.stringify(data, null, 4)
 // }
 
-searchBtn.addEventListener ('click', (e) => {
-    
-})
+// searchBtn.addEventListener ('click', (e) => {
+//     function getInputValue(){
+//         // Selecting the input element and get its value 
+//         var inputVal = document.getElementById("submit-review").value;
+        
+//         // Displaying the value
+//         alert(inputVal);
+// })
