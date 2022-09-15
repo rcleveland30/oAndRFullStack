@@ -3,9 +3,10 @@
     <h3>Released Date: <%=released%></h3>
     <p><%-description%></p>
     <img src="<%=background_image%>" alt="">
+    <div class="review-header">Leave a review!
+        <form id="form" class="form">
+            <textarea data-gameId="<%=id%>" id="review" name="review" cols="30" rows="10"></textarea>
+            <button>Submit</button>
+        </form>
+    </div>
 </div>
-<div class="review-header">Leave a review!</div>
-<form id="form" class="form">
-    <textarea data-gameId="<%=id%>" id="review" name="review" cols="30" rows="10"></textarea>
-    <button>Submit</button>
-</form>

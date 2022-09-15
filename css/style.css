@@ -7,7 +7,7 @@
 
 body,
 html {
-    background-color: cornsilk;
+    background-color: white;
     height: 100%;
 }
 
@@ -51,8 +51,15 @@ input {
     font-size: 1.1rem;
 }
 
+textarea {
+    height: 100px;
+    width: 500px;
+}
+
 .review-space {
+    /* height: 100%; */
     margin: 10px 10px;
+    /* position: absolute; */
 }
 a:link {
     color: blue;
@@ -66,13 +73,18 @@ a:visited {
     border-radius: 25%;
     height: 250px;
     margin-bottom: 15px;
+    position: absolute;
     width: 250px;
 }
 
 .review-space p {
     margin-top: 10px;
-    position: relative;
+    position: absolute;
     text-align: center;
+}
+
+.review-header {
+    margin: 10px;
 }
 
 .bio-box {
@@ -97,8 +109,10 @@ a:visited {
 }
 
 .review-space img {
-    height: 200px;
-    width: 300px;
+    display: block;
+    max-height: 100%;
+    max-width: 100%;
+    opacity: .3;
 }
 
 .y-wrap{
