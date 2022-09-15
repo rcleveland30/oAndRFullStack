@@ -6,7 +6,6 @@ const { User } = require('./models') //this is how we talk to the database
 const session = require('express-session')
 const server = express() //executes the export into server, gives access to methods and properties
 
-
 //third party middleware
 server.use(cookieParser())
 server.use(express.json()) // middleware executes request before server
