@@ -161,6 +161,11 @@ server.get('/users/:id', checkAuth, async (req,res) => {
     }
 })
 
+//message contact form
+server.post('/contact',(req,res) => {
+  console.log(req.body)
+})
+
 server.listen(8080, () => {
     console.log('The server is running at port 8080')
 })
