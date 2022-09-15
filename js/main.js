@@ -1,10 +1,10 @@
 const logIn = document.querySelector('.login-form'),
-logInButton = document.getElementById('submit-log-in'),
-loginModal = document.getElementById('loginModal'), //modal element
-modalButton = document.getElementById('modalButton'), // open modal
-closeButton = document.getElementsByClassName('closeButton')[0], //close modal
-contentDisplay = document.querySelector('.page-contain'),
-searchBtn = document.getElementById('search-btn');
+      logInButton = document.getElementById('submit-log-in'),
+      loginModal = document.getElementById('loginModal'), //modal element
+      modalButton = document.getElementById('modalButton'), // open modal
+      closeButton = document.getElementsByClassName('closeButton')[0], //close modal
+      contentDisplay = document.querySelector('.page-contain'),
+      searchBtn = document.getElementById('search-btn');
 
 function buildListItem(content) {
     const li = document.createElement('li');
@@ -95,18 +95,13 @@ if (window.location.pathname.indexOf('games/') > -1) {
 //     searchRes = e.target.value
 // })
 
+// const getGameList = async() => {
 
-
-searchBtn.addEventListener ('click', (e) => {
+//     
+//     const apiUrl = `https://api.rawg.io/api/games?key=${apiKey}`
     
-})
-const getGameList = async() => {
+//     const apiData = await fetch(apiUrl)
+//     const jsonData = await apiData.json()
+//     const gameList = jsonData.results
 
-    const apiKey = "3b9ce959ca2541dab435e4ccd2611f64"
-    const apiUrl = `https://api.rawg.io/api/games?key=${apiKey}`
-    
-    const apiData = await fetch(apiUrl)
-    const jsonData = await apiData.json()
-    const gameList = jsonData.results
-
-}
+// }
