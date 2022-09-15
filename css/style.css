@@ -51,6 +51,10 @@ input {
     font-size: 1.1rem;
 }
 
+.review-space {
+    margin: 10px 10px;
+}
+
 .bio-box img {
     border-radius: 25%;
     height: 250px;
@@ -58,7 +62,8 @@ input {
     width: 250px;
 }
 
-h3, p {
+.review-space p {
+    margin-top: 10px;
     position: relative;
     text-align: center;
 }
@@ -84,10 +89,10 @@ h3, p {
     color: darkblue;
 }
 
-/* .review-space img {
+.review-space img {
     height: 200px;
     width: 300px;
-} */
+}
 
 .y-wrap{
     display: flex;

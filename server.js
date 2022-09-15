@@ -1,15 +1,11 @@
 const cookieParser = require('cookie-parser')
 const express = require('express') //gives access to packages for server
-const session = require('express-session')
 const checkAuth = require('./middleware')
-const { User } = require('./models') //this is how we talk to the database
-
-const server = express() //executes the export into server, gives access to methods and properties
-const cookieParser = require('cookie-parser');
-const session = require('express-session');
 const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
-const checkAuth = require('./middleware');
-const { User } = require('./models')
+const { User } = require('./models') //this is how we talk to the database
+const session = require('express-session')
+const server = express() //executes the export into server, gives access to methods and properties
+
 
 //third party middleware
 server.use(cookieParser())
@@ -63,7 +59,7 @@ server.post('/login', async (req,res) => {
     }
 })
 
-const navs = ['Home','About','Contact','SignUp'] // navigation pages
+const navs = ['Home','About','Contact'] // navigation pages
 
 
 server.get('/login', (req, res) => {
@@ -102,10 +98,6 @@ server.get('/Contact', (req,res) => {
     res.render('pages', { template: 'contact',navs })
 })
 
-server.get('/SignUp', (req,res) => {
-    res.render('pages', { template: 'signup',navs })
-})
-
 server.get('/login', (req, res) => {
     res.json({
       message: 'Please login'
@@ -115,10 +107,28 @@ server.get('/login', (req, res) => {
 server.get('/games/:slug', async (req, res) => {
   const result = await fetch(`https://api.rawg.io/api/games/${req.params.slug}?key=95016841632347e98a246750ba9e3d58`)
   const data = await result.json()
-  const { name, released, description, background_image } = data;
-  res.render('pages', { template: 'game-detail', navs, name, released, description, background_image })
+  const { name, released, description, background_image, id } = data;
+  res.render('pages', { template: 'game-detail', navs, name, released, description, background_image, id })
 })
 
+server.post('/review/:gameId', (req,res) => {
+  req.session.user = {}
+  req.session.user.id = 1   //115-116 for testing, delete later
+  res.json( {id:req.params.gameId} )
+});
+
+server.post('/review/:gameId', async (req, res) => {
+  const { gameId, userId, review } = req.body;
+  const newUser = await User.create({
+    gameId,
+    userId,
+    review
+  });
+  res.json({
+    id: newUser.id, // <--????
+    message: 'Review submitted',
+  });
+});
 
 server.post('/login', async (req, res) => {
     const { username, password } = req.body;
