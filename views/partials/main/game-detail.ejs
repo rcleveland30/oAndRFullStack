@@ -1,8 +1,11 @@
 <div class="review-space">
     <h1><%=name%></h1>
-    <h3><%=released%></h3>
+    <h3>Released Date: <%=released%></h3>
     <p><%-description%></p>
     <img src="<%=background_image%>" alt="">
 </div>
-<textarea name="" id="review-text" cols="30" rows="10"></textarea>
-<button id="submit-reivew">Submit</button>
+<div class="review-header">Leave a review!</div>
+<form id="form" class="form">
+    <textarea data-gameId="<%=id%>" id="review" name="review" cols="30" rows="10"></textarea>
+    <button>Submit</button>
+</form>
