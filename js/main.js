@@ -97,3 +97,16 @@ if (window.location.pathname.indexOf('games/') > -1) {
 
 
 
+searchBtn.addEventListener ('click', (e) => {
+    
+})
+const getGameList = async() => {
+
+    const apiKey = "3b9ce959ca2541dab435e4ccd2611f64"
+    const apiUrl = `https://api.rawg.io/api/games?key=${apiKey}`
+    
+    const apiData = await fetch(apiUrl)
+    const jsonData = await apiData.json()
+    const gameList = jsonData.results
+
+}

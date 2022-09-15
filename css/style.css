@@ -54,6 +54,13 @@ input {
 .review-space {
     margin: 10px 10px;
 }
+a:link {
+    color: blue;
+  }
+
+a:visited {
+    color: green;
+  }  
 
 .bio-box img {
     border-radius: 25%;
