@@ -30,29 +30,29 @@ const gameList = async() => {
 }
 gameList()
 
-// //modal click for open
-// modalButton.addEventListener('click', openModal)
+//modal click for open
+modalButton.addEventListener('click', openModal)
 
-// //modal click for close
-// closeButton.addEventListener('click', closeModal)
+//modal click for close
+closeButton.addEventListener('click', closeModal)
 
-// //outside click
-// window.addEventListener('click', clickOutside)
+//outside click
+window.addEventListener('click', clickOutside)
 
-// // open modal function
-// function openModal(){
-//     loginModal.style.display = 'block'
-// }
-// // close modal function
-// function closeModal(){
-//     loginModal.style.display = 'none'
-// }
+// open modal function
+function openModal(){
+    loginModal.style.display = 'block'
+}
+// close modal function
+function closeModal(){
+    loginModal.style.display = 'none'
+}
 
-// function clickOutside(e){
-//     if(e.target == loginModal){
-//         loginModal.style.display = 'none'
-//     }
-// }
+function clickOutside(e){
+    if(e.target == loginModal){
+        loginModal.style.display = 'none'
+    }
+}
 
 const handleSubmit = e => {
         e.preventDefault()
@@ -74,7 +74,7 @@ async function sendHttpData (body) {
     console.log(data)
 }
 
-//     logIn.addEventListener('submit', handleSubmit);
+logIn.addEventListener('submit', handleSubmit);
 
 function stringifyFormData(fd) {
     const data = {};
@@ -97,7 +97,7 @@ if (window.location.pathname.indexOf('games/') > -1) {
 
 // const getGameList = async() => {
 
-//     
+    
 //     const apiUrl = `https://api.rawg.io/api/games?key=${apiKey}`
     
 //     const apiData = await fetch(apiUrl)
