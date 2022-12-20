@@ -1,14 +1,21 @@
-# oAndRFullStackProject
+# GameTyme
 
-Game Review Site being collaboratively developed by Ron and Oscar.
+![Landing Page](./assets/readme/landing.png)
 
-Ron's Github profile can be found [here](https://github.com/rcleveland30).
+Game Review Site being collaboratively developed by [Ron](https://github.com/rcleveland30) and [Oscar](https://github.com/Ozzythegrouch) for the Digital Crafts Bootcamp.
 
-Oscar's Github profile can be found [here](https://github.com/Ozzythegrouch).
+## Functionality
 
-## A project using front-end, back-end, and a database.
+Go and find your favorite game and leave a review. The review gets saved on the database that was hooked up with PostgreSQL.
 
-Using Javascript, HTML, CSS, and EJS.
+![review](./assets/readme/game.png)
+
+We have the option to contact us through our form if there are any issues.
+![contact](./assets/readme/contact.png)
+
+Learn more about us through our about section and what we contributed to the project.
+
+![about](./assets/readme/about.png)
 
 ## Taking the RAWG Video Games Database created by RAWG on RapidAPI.
 
